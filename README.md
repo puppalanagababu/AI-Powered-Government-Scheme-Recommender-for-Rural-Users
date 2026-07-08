@@ -37,29 +37,6 @@ An intuitive, interactive, and village-friendly web application designed to help
 
 ---
 
-## 🚀 How to Run the Project Locally
-
-Since this is a lightweight static website, you do not need complex compilation steps. Choose any of the following methods to run it on your local computer:
-
-### Option 1: Using Node.js (Recommended)
-If you have Node.js installed, open your terminal in the project directory and run:
-```bash
-npx serve
-```
-*Then open **`http://localhost:3000`** in your browser.*
-
-### Option 2: Using Python
-If you have Python installed, run:
-```bash
-python -m http.server 8000
-```
-*Then open **`http://localhost:8000`** in your browser.*
-
-### Option 3: Direct File Opening
-Double-click the `index.html` file or run this in a PowerShell terminal:
-```powershell
-Start-Process index.html
-```
 
 ---
 
