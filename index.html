@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Scheme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">AI</span>
+        <div>
+          <strong data-i18n="appName">Government Scheme</strong>
+          <span data-i18n="tagline">Government scheme recommender</span>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#profile" data-i18n="navFind">Find schemes</a>
+        <a href="#schemes" data-i18n="navSchemes">Schemes</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+      </nav>
+      <label class="language-select">
+        <span data-i18n="languageLabel">Language</span>
+        <select id="language">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="te">Telugu</option>
+        </select>
+      </label>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="heroEyebrow">AI-Powered Government Scheme Recommender for Rural Users</p>
+          <h1 data-i18n="heroTitle">Find the right welfare schemes with simple village-friendly questions.</h1>
+          <p data-i18n="heroCopy">
+            Government Scheme matches a rural household profile with useful central and state-style
+            government schemes, explains why each scheme fits, and gives the next application steps.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#profile" data-i18n="startRecommendation">Start recommendation</a>
+            <a class="button secondary" href="#schemes" data-i18n="viewAllSchemes">View all schemes</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Recommendation preview">
+          <div class="signal-card">
+            <span data-i18n="bestMatch">Best match</span>
+            <strong>PM-KISAN</strong>
+            <p>Small farmer, low income, land ownership matched.</p>
+          </div>
+          <div class="score-ring">
+            <span>92%</span>
+            <small data-i18n="fitScore">fit score</small>
+          </div>
+          <div class="mini-list">
+            <span data-i18n="documents">Documents</span>
+            <p>Aadhaar, bank account, land record</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="profile" class="workspace">
+        <form class="profile-form" id="profileForm">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="profileEyebrow">Rural user profile</p>
+            <h2 data-i18n="profileTitle">Tell us about the household</h2>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              <span data-i18n="stateLabel">State</span>
+              <select id="state">
+                <option value="any">Any state</option>
+                <option value="andhra-pradesh">Andhra Pradesh</option>
+                <option value="bihar">Bihar</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="kerala">Kerala</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="tamil-nadu">Tamil Nadu</option>
+                <option value="uttar-pradesh">Uttar Pradesh</option>
+                <option value="west-bengal">West Bengal</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="occupationLabel">Main occupation</span>
+              <select id="occupation">
+                <option value="farmer">Farmer</option>
+                <option value="labourer">Daily wage labourer</option>
+                <option value="student">Student</option>
+                <option value="artisan">Artisan / small worker</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="self-help-group">Self-help group member</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="incomeLabel">Annual family income</span>
+              <select id="income">
+                <option value="low">Below Rs 1 lakh</option>
+                <option value="lower-middle">Rs 1 lakh to Rs 2.5 lakh</option>
+                <option value="middle">Rs 2.5 lakh to Rs 5 lakh</option>
+                <option value="higher">Above Rs 5 lakh</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="landLabel">Land ownership</span>
+              <select id="land">
+                <option value="none">No land</option>
+                <option value="small">Small / marginal land</option>
+                <option value="medium">Medium land</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="ageLabel">Age group</span>
+              <select id="age">
+                <option value="child">Below 18</option>
+                <option value="youth">18 to 35</option>
+                <option value="adult">36 to 59</option>
+                <option value="senior">60 and above</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="categoryLabel">Social category</span>
+              <select id="category">
+                <option value="general">General</option>
+                <option value="sc-st">SC / ST</option>
+                <option value="obc">OBC</option>
+                <option value="minority">Minority</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="checkboxes">
+            <legend data-i18n="needsLegend">Needs and conditions</legend>
+            <label><input type="checkbox" value="housing" /> <span data-i18n="needHousing">Needs housing support</span></label>
+            <label><input type="checkbox" value="health" /> <span data-i18n="needHealth">Needs health insurance</span></label>
+            <label><input type="checkbox" value="toilet" /> <span data-i18n="needToilet">Needs toilet / sanitation support</span></label>
+            <label><input type="checkbox" value="education" /> <span data-i18n="needEducation">Student education support</span></label>
+            <label><input type="checkbox" value="women" /> <span data-i18n="needWomen">Woman applicant / women-led household</span></label>
+            <label><input type="checkbox" value="livelihood" /> <span data-i18n="needLivelihood">Wants livelihood or business support</span></label>
+          </fieldset>
+
+          <button class="button primary full" type="submit" data-i18n="recommendButton">Recommend schemes</button>
+        </form>
+
+        <aside class="results-panel" aria-live="polite">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="recommendationEyebrow">AI recommendation</p>
+            <h2 data-i18n="topMatches">Top matches</h2>
+          </div>
+          <div id="resultSummary" class="result-summary" data-i18n="emptySummary">
+            Fill the profile and press recommend to see personalized schemes.
+          </div>
+          <div id="results" class="results"></div>
+        </aside>
+      </section>
+
+      <section id="schemes" class="scheme-library">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-i18n="libraryEyebrow">Scheme library</p>
+          <h2 data-i18n="libraryTitle">Available schemes in this prototype</h2>
+        </div>
+        <div id="schemeLibrary" class="scheme-grid"></div>
+      </section>
+
+      <section id="about" class="about">
+        <div>
+          <p class="eyebrow" data-i18n="aboutEyebrow">How it works</p>
+          <h2 data-i18n="aboutTitle">Simple matching, clear explanation</h2>
+        </div>
+        <div class="about-grid">
+          <article>
+            <strong data-i18n="aboutStep1Title">1. Collect profile</strong>
+            <p data-i18n="aboutStep1Copy">The app asks practical questions about income, work, land, age, and household needs.</p>
+          </article>
+          <article>
+            <strong data-i18n="aboutStep2Title">2. Score schemes</strong>
+            <p data-i18n="aboutStep2Copy">A transparent matching engine compares the user profile with eligibility signals.</p>
+          </article>
+          <article>
+            <strong data-i18n="aboutStep3Title">3. Explain next steps</strong>
+            <p data-i18n="aboutStep3Copy">Each result shows why it matched, which documents to prepare, and how to apply.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <span data-i18n="footerNote">Prototype for educational use. Confirm final eligibility and applications on official
+        government portals or at a nearby Common Service Centre.</span>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
